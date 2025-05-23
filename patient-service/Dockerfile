@@ -5,8 +5,8 @@ WORKDIR /app
 COPY pom.xml .
 
 #install all the packages and cache until a change has been detected
-# RUN mvn dependency:go-offline -B
-RUN mvn dependency:go-offline -B -U
+RUN mvn dependency:go-offline -B
+#RUN mvn dependency:go-offline -B -U
 
 #copying all the source code
 COPY src ./src
